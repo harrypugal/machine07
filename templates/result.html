@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Stock Price Predictions</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Stock Price Predictions</h2>
+        
+        <div class="prediction-output">
+            <h3>Predicted Prices</h3>
+            <!-- Render the prediction table using the variable passed from Flask -->
+            {{ prediction_table|safe }}
+
+            <a href="/" class="btn btn-primary mt-3">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>

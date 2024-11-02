@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Stock Price Predictor</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Stock Price Prediction</h2>
+
+        <a> This prediction one of the 60days time series 
+        <form action="/manual" method="POST" class="mt-3">
+            <div class="form-group">
+                <label for="ticker">Stock Ticker:</label>
+                <input type="text" id="ticker" name="ticker" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="start_date">Start Date:</label>
+                <input type="date" id="start_date" name="start_date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="end_date">End Date:</label>
+                <input type="date" id="end_date" name="end_date" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Predictions</button>
+        </form>
+
+        <hr>
+
+        <h3>Upload Excel File for Prediction</h3>
+        <form action="/predict_excel" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Select Excel File:</label>
+                <input type="file" id="file" name="file" class="form-control" accept=".xls,.xlsx" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload and Predict</button>
+        </form>
+    </div>
+</body>
+</html>
